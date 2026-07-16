@@ -1,26 +1,174 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FCFAF6;
+  --foreground: #122442;
+  --brand-navy: #122442;
+  --brand-cream: #F6F3ED;
+  --brand-red: #D84444;
+  --brand-gold: #EAA924;
+  --brand-green: #4AA94B;
+  --brand-purple: #8A38F5;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  
+  --font-sans: var(--font-geist-sans), Arial, sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+  --font-creative: var(--font-fontjek), cursive;
+  --font-accent: var(--font-merienda), Georgia, serif;
+  --font-manda: var(--font-MaShanZheng), regular, serif;
+
+  --color-navy: var(--brand-navy);
+  --color-cream: var(--brand-cream);
+  --color-brand-red: var(--brand-red);
+  --color-brand-gold: var(--brand-gold);
+  --color-brand-green: var(--brand-green);
+  --color-brand-purple: var(--brand-purple);
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-subtle: pulse-subtle 3s ease-in-out infinite;
+  --animate-spin-slow: spin 20s linear infinite;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(1deg); }
+  }
+  @keyframes pulse-subtle {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.85; }
+  }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
+
+/* Custom Creative Canvas Theme Utilities */
+
+.paper-texture {
+  position: relative;
+  background-image: url('/extracted/316_bg_2.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.navy-texture {
+  position: relative;
+  background-image: url('/extracted/user_bg_navy.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Torn paper edge containers */
+.torn-divider {
+  position: relative;
+  height: 48px;
+  width: 100%;
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  z-index: 10;
+}
+
+/* Smooth active links */
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: var(--brand-gold);
+  border-radius: 9999px;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: var(--brand-gold);
+}
+
+/* Premium creative button */
+.btn-creative-dark {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.btn-creative-dark:hover {
+  transform: scale(1.03);
+  filter: brightness(1.1);
+}
+
+/* Hide scrollbar for carousels */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Responsive Stroke Scale Utilities */
+.portfolio-bg-stroke {
+  --stroke-scale: 1.016;
+}
+@media (min-width: 768px) {
+  .portfolio-bg-stroke {
+    --stroke-scale: 1.015;
+  }
+}
+
+.blog-bg-stroke {
+  --stroke-scale: 1.011;
+}
+@media (min-width: 768px) {
+  .blog-bg-stroke {
+    --stroke-scale: 1.009;
+  }
+}
+
+.services-bg-stroke {
+  --stroke-scale: 1.025;
+}
+@media (min-width: 768px) {
+  .services-bg-stroke {
+    --stroke-scale: 1.065;
+  }
+}
+
+.services-sec-stroke {
+  --stroke-scale: 1.005;
+}
+@media (min-width: 768px) {
+  .services-sec-stroke {
+    --stroke-scale: 1.05;
+  }
+}
+

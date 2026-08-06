@@ -141,7 +141,7 @@ body {
 }
 @media (min-width: 768px) {
   .portfolio-bg-stroke {
-    --stroke-scale: 1.015;
+    --stroke-scale: 1.0101;
   }
 }
 
@@ -150,7 +150,7 @@ body {
 }
 @media (min-width: 768px) {
   .blog-bg-stroke {
-    --stroke-scale: 1.009;
+    --stroke-scale: 1.0065;
   }
 }
 
@@ -159,7 +159,7 @@ body {
 }
 @media (min-width: 768px) {
   .services-bg-stroke {
-    --stroke-scale: 1.065;
+    --stroke-scale: 1.060;
   }
 }
 

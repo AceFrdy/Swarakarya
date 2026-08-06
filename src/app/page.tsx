@@ -45,7 +45,7 @@ export default function Home() {
 
         <div
           className="absolute bottom-[-120px] left-[-340px] w-[800px] h-[600px] bg-white pointer-events-none select-none"
-          style={{ ...yellowMask, zIndex: -2, transform: "rotate(-45deg) scale(1.03)" }}
+          style={{ ...yellowMask, zIndex: -2, transform: "rotate(-45deg) scale(1.012)" }}
         />
 
         {/* Yellow accent: below Portfolio content, extends downward */}
@@ -66,7 +66,7 @@ export default function Home() {
 
         <div
           className="absolute top-[-270px] right-[-740px] w-[1820px] h-[1200px] bg-white pointer-events-none select-none"
-          style={{ ...yellowMask, zIndex: -2, transform: "rotate(130deg) scale(1.016)" }}
+          style={{ ...yellowMask, zIndex: -2, transform: "rotate(130deg) scale(1.006)" }}
         />
 
         <div

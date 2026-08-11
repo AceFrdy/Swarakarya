@@ -37,9 +37,62 @@ const maShanZheng = localFont({
   display: "swap",
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://swarakarya.com";
+
 export const metadata: Metadata = {
-  title: "Saranakarya | Solusi Digital yang Bermakna",
-  description: "Partner kreatif yang membantu bisnis Anda tumbuh lebih cepat melalui solusi digital yang menarik and bermakna. Kami menciptakan pengalaman digital yang relevan, inovatif, dan berkesinambungan.",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Swarakarya | Solusi Digital yang Bermakna & Kreatif",
+    template: "%s | Swarakarya",
+  },
+  icons: {
+    icon: "/assets/logo/logo_utama.svg",
+  },
+  description: "Partner kreatif yang membantu bisnis Anda tumbuh lebih cepat melalui solusi digital yang menarik dan bermakna. Kami menciptakan pengalaman digital yang relevan, inovatif, dan berkesinambungan.",
+  keywords: [
+    "Swarakarya", "Saranakarya", "solusi digital", "agency kreatif", "branding", 
+    "desain website", "jasa desain", "pembuatan website", "digital marketing", 
+    "web development", "UI UX design", "konten digital"
+  ],
+  authors: [{ name: "Swarakarya Team", url: siteUrl }],
+  creator: "Swarakarya",
+  publisher: "Swarakarya",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: "./",
+  },
+  openGraph: {
+    type: "website",
+    locale: "id_ID",
+    url: siteUrl,
+    title: "Swarakarya | Solusi Digital yang Bermakna & Kreatif",
+    description: "Partner kreatif yang membantu bisnis Anda tumbuh lebih cepat melalui solusi digital yang menarik dan bermakna. Kami menciptakan pengalaman digital yang relevan, inovatif, dan berkesinambungan.",
+    siteName: "Swarakarya",
+    images: [
+      {
+        url: "/assets/logo/logo_utama.svg",
+        width: 1200,
+        height: 630,
+        alt: "Swarakarya Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Swarakarya | Solusi Digital yang Bermakna & Kreatif",
+    description: "Partner kreatif yang membantu bisnis Anda tumbuh lebih cepat melalui solusi digital yang menarik dan bermakna. Kami menciptakan pengalaman digital yang relevan, inovatif, dan berkesinambungan.",
+    images: ["/assets/logo/logo_utama.svg"],
+  },
 };
 
 export default function RootLayout({
@@ -49,7 +102,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="id"
       className={`${geistSans.variable} ${geistMono.variable} ${protestRevolution.variable} ${fontjek.variable} ${merienda.variable} ${maShanZheng.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>

@@ -137,7 +137,7 @@ body {
 
 /* Responsive Stroke Scale Utilities */
 .portfolio-bg-stroke {
-  --stroke-scale: 1.016;
+  --stroke-scale: 1.01;
 }
 @media (min-width: 768px) {
   .portfolio-bg-stroke {
@@ -164,7 +164,7 @@ body {
 }
 
 .services-sec-stroke {
-  --stroke-scale: 1.005;
+  --stroke-scale: 1.015;
 }
 @media (min-width: 768px) {
   .services-sec-stroke {

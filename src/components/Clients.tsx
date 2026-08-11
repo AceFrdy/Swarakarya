@@ -4,10 +4,9 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
 const CLIENT_LOGOS = [
-  { id: 1, name: "Perpustakaan Nasional", src: "/assets/logo/logo 1 1.svg" },
-  { id: 2, name: "Kemenpkp", src: "/assets/logo/logo 2 1.svg" },
-  { id: 3, name: "Badan Industri Mineral", src: "/assets/logo/logo 3 1.svg" },
-  { id: 4, name: "Bank Indonesia", src: "/assets/logo/logo 4 1.svg" }
+  { id: 1, name: "ASTA DIGITAL", src: "/assets/logo/Logo Hitam.png" },
+  { id: 2, name: "Aksara Production", src: "/assets/logo/Logo A.png" },
+  { id: 3, name: "Universal Mobilindo", src: "/assets/logo/R&B.svg" },
 ];
 
 export default function Clients() {
@@ -36,7 +35,7 @@ export default function Clients() {
         {/* Title with Brush Underline */}
         <div className="flex flex-col items-center gap-3">
           <p className="text-center font-accent text-navy text-xl sm:text-2xl font-bold">
-            Dipercaya oleh berbagai instansi & perusahaan
+            Dipercaya oleh berbagai perusahaan
           </p>
           <div 
             className="w-48 h-3.5 bg-brand-gold"
@@ -65,29 +64,36 @@ export default function Clients() {
           </button>
 
           {/* Slider Container */}
-          <div className="flex-1 overflow-hidden h-24 relative flex items-center justify-center">
+          <div className="flex-1 overflow-hidden h-32 relative flex items-center justify-center">
             {/* Desktop: Show all 4 logos in a row side-by-side */}
             <div className="hidden md:flex items-center justify-center gap-12 w-full">
               {CLIENT_LOGOS.map((logo, idx) => (
                 <div 
                   key={logo.id} 
-                  className={`w-44 h-16 relative flex-shrink-0 transition-all duration-500 ${
+                  className={`w-52 h-32 relative flex-shrink-0 transition-all duration-500 ${
                     clientIndex === idx ? "scale-105 opacity-100" : "opacity-80 hover:opacity-100"
                   }`}
                 >
-                  <Image src={logo.src} alt={logo.name} fill className="object-contain" />
+                  <Image 
+                    src={logo.src} 
+                    alt={logo.name} 
+                    fill 
+                    className="object-contain" 
+                    sizes="(max-width: 768px) 192px, 208px"
+                  />
                 </div>
               ))}
             </div>
 
             {/* Mobile/Tablet: Slide one or two logos at a time */}
             <div className="flex md:hidden items-center justify-center w-full">
-              <div className="w-48 h-16 relative transition-all duration-500 transform scale-100">
+              <div className="w-56 h-28 relative transition-all duration-500 transform scale-100">
                 <Image 
                   src={CLIENT_LOGOS[clientIndex].src} 
                   alt={CLIENT_LOGOS[clientIndex].name} 
                   fill 
                   className="object-contain" 
+                  sizes="(max-width: 768px) 224px, 208px"
                 />
               </div>
             </div>

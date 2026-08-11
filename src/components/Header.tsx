@@ -4,12 +4,12 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
 const NAV_ITEMS = [
-  { label: "Beranda", href: "#", section: "beranda" },
-  { label: "Layanan", href: "#layanan", section: "layanan" },
-  { label: "Portofolio", href: "#portofolio", section: "portofolio" },
-  { label: "Tentang Kami", href: "#tentang-kami", section: "tentang-kami" },
-  { label: "Blog", href: "#blog", section: "blog" },
-  { label: "Kontak", href: "#kontak", section: "kontak" },
+  { label: "Beranda", href: "/", section: "beranda" },
+  { label: "Layanan", href: "/#layanan", section: "layanan" },
+  { label: "Portofolio", href: "/#portofolio", section: "portofolio" },
+  { label: "Tentang Kami", href: "/#tentang-kami", section: "tentang-kami" },
+  { label: "Blog", href: "/#blog", section: "blog" },
+  { label: "Kontak", href: "/#kontak", section: "kontak" },
 ];
 
 export default function Header() {
@@ -18,6 +18,10 @@ export default function Header() {
 
   /* ── Scroll: active section detection only ── */
   useEffect(() => {
+    if (window.location.pathname !== "/") {
+      setActiveSection("");
+      return;
+    }
     const onScroll = () => {
       const sectionIds = NAV_ITEMS.map((n) => n.section).filter((s) => s !== "beranda");
       let current = "beranda";
@@ -31,6 +35,7 @@ export default function Header() {
     };
 
     window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
@@ -106,7 +111,7 @@ export default function Header() {
         {/* ── CTA Button "Konsultasi Gratis" ── */}
         <div className="hidden md:block flex-shrink-0">
           <a
-            href="#kontak"
+            href="/#kontak"
             className="relative inline-flex items-center justify-center
                        w-[200px] h-[64px]
                        text-white font-bold italic text-[15px] tracking-wide
@@ -170,7 +175,7 @@ export default function Header() {
 
           {/* Mobile CTA */}
           <a
-            href="#kontak"
+            href="/#kontak"
             onClick={() => setMobileMenuOpen(false)}
             className="relative inline-flex items-center justify-center
                        w-[190px] h-[52px]

@@ -110,7 +110,6 @@ function ServiceCard({ srv }: { srv: ServiceItem }) {
             width={64}
             height={64}
             className="object-contain"
-            style={{ width: "64px", height: "auto" }}
           />
         ) : (
           srv.iconJsx

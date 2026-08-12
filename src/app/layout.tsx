@@ -46,7 +46,19 @@ export const metadata: Metadata = {
     template: "%s | Swarakarya",
   },
   icons: {
-    icon: "/assets/logo/logo_utama.svg",
+    icon: [
+      { url: "/assets/logo/logo_utama.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/assets/logo/logo_utama.svg",
+    other: [
+      {
+        rel: "icon",
+        url: "/assets/logo/logo_utama.svg",
+        type: "image/svg+xml",
+      },
+    ],
   },
   description: "Partner kreatif yang membantu bisnis Anda tumbuh lebih cepat melalui solusi digital yang menarik dan bermakna. Kami menciptakan pengalaman digital yang relevan, inovatif, dan berkesinambungan.",
   keywords: [

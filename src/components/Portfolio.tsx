@@ -13,16 +13,16 @@ const PORTFOLIO_ITEMS = [
   },
   {
     id: 2,
-    title: "Sistem Informasi Manajemen Kemen",
+    title: "Sistem Informasi Internal Terintegrasi",
     category: "Development",
-    image: "/extracted/420_bg_1_1.png",
+    image: "/extracted/408_64988_1.jpg",
     description: "Integrasi platform sistem informasi internal untuk memfasilitasi koordinasi antar unit kerja secara efisien."
   },
   {
     id: 3,
     title: "UI/UX Redesign Portal Finansial",
     category: "UI/UX Design",
-    image: "/extracted/316_bg_2.png",
+    image: "/extracted/ui-ux-design.webp",
     description: "Transformasi visual dan peningkatan alur transaksi pengguna pada portal manajemen keuangan digital."
   }
 ];

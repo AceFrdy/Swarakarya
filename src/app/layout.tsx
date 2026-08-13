@@ -47,15 +47,15 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/logo_utama_pavicon.svg", type: "image/svg+xml" },
       { url: "/favicon.ico", sizes: "any" },
     ],
     shortcut: "/favicon.ico",
-    apple: "/icon.svg",
+    apple: "/logo_utama_pavicon.svg",
     other: [
       {
         rel: "icon",
-        url: "/icon.svg",
+        url: "/logo_utama_pavicon.svg",
         type: "image/svg+xml",
       },
     ],

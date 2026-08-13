@@ -47,15 +47,15 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/assets/logo/logo_utama.svg", type: "image/svg+xml" },
+      { url: "/icon.svg", type: "image/svg+xml" },
       { url: "/favicon.ico", sizes: "any" },
     ],
     shortcut: "/favicon.ico",
-    apple: "/assets/logo/logo_utama.svg",
+    apple: "/icon.svg",
     other: [
       {
         rel: "icon",
-        url: "/assets/logo/logo_utama.svg",
+        url: "/icon.svg",
         type: "image/svg+xml",
       },
     ],
@@ -81,7 +81,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "./",
+    canonical: "/",
   },
   openGraph: {
     type: "website",
@@ -92,7 +92,7 @@ export const metadata: Metadata = {
     siteName: "Swarakarya",
     images: [
       {
-        url: "/assets/logo/logo_utama.svg",
+        url: "/assets/logo/Logo A.png",
         width: 1200,
         height: 630,
         alt: "Swarakarya Logo",
@@ -103,7 +103,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Swarakarya | Solusi Digital yang Bermakna & Kreatif",
     description: "Partner kreatif yang membantu bisnis Anda tumbuh lebih cepat melalui solusi digital yang menarik dan bermakna. Kami menciptakan pengalaman digital yang relevan, inovatif, dan berkesinambungan.",
-    images: ["/assets/logo/logo_utama.svg"],
+    images: ["/assets/logo/Logo A.png"],
   },
 };
 

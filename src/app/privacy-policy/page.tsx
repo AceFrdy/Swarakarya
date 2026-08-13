@@ -5,6 +5,9 @@ import Footer from "@/components/Footer";
 export const metadata = {
   title: "Kebijakan Privasi | Swarakarya",
   description: "Kebijakan privasi Swarakarya - Informasi lengkap tentang bagaimana kami mengelola data Anda, kebijakan cookie, dan kepatuhan periklanan termasuk Google AdSense.",
+  alternates: {
+    canonical: "/privacy-policy",
+  },
 };
 
 export default function PrivacyPolicy() {

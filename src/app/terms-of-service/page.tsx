@@ -5,6 +5,9 @@ import Footer from "@/components/Footer";
 export const metadata = {
   title: "Syarat & Ketentuan | Swarakarya",
   description: "Syarat dan Ketentuan penggunaan layanan Swarakarya - Aturan penggunaan situs web dan hak kekayaan intelektual kami.",
+  alternates: {
+    canonical: "/terms-of-service",
+  },
 };
 
 export default function TermsOfService() {
